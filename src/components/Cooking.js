@@ -46,6 +46,7 @@ class Cooking extends React.Component {
 			  {this.state.loading ?
 					<div>Loading..</div> :
         	<div>
+					<h1>Random Cooking Activity</h1>
 						Activity: {this.state.activity} <br/>
 						Type: {this.state.type} <br/>
 						Participants: {this.state.participants}<br/>

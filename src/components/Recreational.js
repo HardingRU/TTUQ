@@ -11,10 +11,6 @@ class Recreational extends React.Component {
       participants: null,
       loading: true
 		}
-
-
-    //FIND NEW ACT BUTTON?
-    //BREAK OUT INTO OWN SERVICE?
 		this.getActivity = this.getActivity.bind(this)
 	}
 
@@ -30,7 +26,7 @@ class Recreational extends React.Component {
         })
       })
       .catch(function (error) {
-        // handle error
+				console.log(error);
       })
       .finally(function () {
         that.setState({
@@ -50,6 +46,7 @@ class Recreational extends React.Component {
 			  {this.state.loading ?
 					<div>Loading..</div> :
         	<div>
+						<h1>Random Recreational Activity</h1>
 						Activity: {this.state.activity} <br/>
 						Type: {this.state.type} <br/>
 						Participants: {this.state.participants}<br/>

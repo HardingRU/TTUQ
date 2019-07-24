@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Recreational from './components/Recreational';
 import Cooking from './components/Cooking';
-import Activity from './components/Activity'
 import Settings from './components/Settings';
 import Profile from './components/Profile';
 import Landing from './components/Landing';
@@ -69,11 +68,9 @@ import Landing from './components/Landing';
 
     switch(this.state.currentPage) {
       case 'recreational':
-        //currentPage = <Activity type='recreational' />
         currentPage = <Recreational />
         break;
       case 'cooking':
-        //currentPage = <Activity type='cooking' />
         currentPage = <Cooking />
         break;
       case 'profile':
@@ -95,7 +92,7 @@ import Landing from './components/Landing';
      <div>
         <div>
           <div className="w3-sidebar w3-bar-block w3-light-grey w3-card" style={{width: '160px'}}>
-            <div id="landing" className="w3-bar-item w3-button" onClick={this.toggle}>Landing</div>
+            <img src="https://seeklogo.com/images/M/minions-logo-B245BBC7EA-seeklogo.com.png" alt="minions" id="landing" className="w3-bar-item w3-button" onClick={this.toggle}></img>
             <div className="activities w3-bar-item w3-button" onClick={this.accordion}>
               Activities <i className="activities fa fa-caret-down"></i>
             </div>

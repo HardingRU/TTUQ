@@ -24,7 +24,7 @@ class Profile extends React.Component {
 					</div> :
 					<div>
 						<h1> No Profile Information Available </h1>
-						Please enter your information in the <a href="#" onClick={this.redirectToSettings}>Settings</a> section
+						Please enter your information in the <a href="#" id="settingsLink" onClick={this.redirectToSettings}>Settings</a> section
 					</div>
 				}
 			</div>

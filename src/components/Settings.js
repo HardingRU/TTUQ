@@ -21,7 +21,22 @@ class Settings extends React.Component {
   }
 
   handleSubmit(event) {
-		this.props.returnData(this.state)
+		var errorMessage = '';
+		if(this.state.firstName === '') {
+			errorMessage += 'First Name must not be blank \n';
+		}
+		if(this.state.lastName === '') {
+			errorMessage += 'Last Name must not be blank \n';
+		}
+		if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.emailAddress)) {
+			errorMessage += 'Invalid email address format'
+		}
+		if(errorMessage != '') {
+			alert(errorMessage);
+		}
+		else {
+			this.props.returnData(this.state)
+		}
     event.preventDefault();
   }
 

@@ -8,3 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Run Application
 1) npm start
+
+
+## Run Tests
+1) npm test
